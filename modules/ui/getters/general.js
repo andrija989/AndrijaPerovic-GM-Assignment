@@ -14,4 +14,10 @@ export class General {
     const delay = new Promise((resolve) => setTimeout(resolve, ms));
     return delay;
   }
+
+  async clearTextField(numOfTimes = 10) {
+    for (let i = 0; i <= numOfTimes; i++) {
+      await this.page.keyboard.press("Backspace");
+    }
+  }
 }
