@@ -7,12 +7,12 @@ test.describe("UI scenarios", () => {
     await homePage.navigateToElements();
   });
 
-  test("Scenario A", async ({ playgroundPage }) => {
+  test("TC - 01", async ({ playgroundPage }) => {
     await playgroundPage.openTabels({});
     await playgroundPage.addNewRecord({});
   });
 
-  test.only("Scenario B", async ({ playgroundPage }) => {
+  test("TC - 02", async ({ playgroundPage }) => {
     await playgroundPage.openTabels({});
     await playgroundPage.editRecord({
       firstName: generalData.personNew.firstName,
@@ -28,5 +28,27 @@ test.describe("UI scenarios", () => {
       1,
       generalData.personNew.lastName
     );
+  });
+
+  test("TC - 03", async ({ brokenImagesPage }) => {
+    await brokenImagesPage.navigateToBrokenImages();
+    await brokenImagesPage.validateBrokenImage();
+  });
+
+  test("TC - 04", async ({ practiceForms }) => {
+    await practiceForms.navigateToPracticeForms();
+    await practiceForms.fillForm({});
+  });
+
+  test("TC - 05", async ({ progressBar }) => {
+    await progressBar.validateProgress();
+  });
+
+  test("TC - 06", async ({ hoverPage }) => {
+    await hoverPage.validateTooltip();
+  });
+
+  test.only("TC - 07", async ({ dragAndDrop }) => {
+    await dragAndDrop.moveItem();
   });
 });

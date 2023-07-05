@@ -4,6 +4,11 @@ import { chromium, test as baseTest } from "@playwright/test";
 import { General } from "../ui/getters/general";
 import { HomePage } from "../ui/getters/homePage";
 import { PlaygroundPage } from "../ui/getters/playgroundPage";
+import { BrokenImagesPage } from "../ui/getters/brokenImagesPage";
+import { PracticeForms } from "../ui/getters/praticeForms";
+import { ProgressBar } from "../ui/getters/progressBar";
+import { HoverPage } from "../ui/getters/hoverPage";
+import { DragAndDrop } from "../ui/getters/dragAndDrop";
 
 const testPages = baseTest.extend({
   wpage: [
@@ -26,6 +31,21 @@ const testPages = baseTest.extend({
   },
   playgroundPage: async ({ wpage }, use) => {
     await use(new PlaygroundPage(wpage));
+  },
+  brokenImagesPage: async ({ wpage }, use) => {
+    await use(new BrokenImagesPage(wpage));
+  },
+  practiceForms: async ({ wpage }, use) => {
+    await use(new PracticeForms(wpage));
+  },
+  progressBar: async ({ wpage }, use) => {
+    await use(new ProgressBar(wpage));
+  },
+  hoverPage: async ({ wpage }, use) => {
+    await use(new HoverPage(wpage));
+  },
+  dragAndDrop: async ({ wpage }, use) => {
+    await use(new DragAndDrop(wpage));
   },
 });
 

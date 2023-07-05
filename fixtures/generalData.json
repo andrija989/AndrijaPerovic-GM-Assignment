@@ -10,5 +10,19 @@
     "personNew" : {
         "firstName" : "Gerimedica" ,
         "lastName"  : "BV"
+    },
+    "formData" : {
+        "firstName" : "Gerimedica",
+        "lastName" : "BV",
+        "age" : "30",
+        "email" : "test@test.com",
+        "gender" : "Male",
+        "mobile" : "0123456789",
+        "dob" : "15th January 1990",
+        "subjects" : "Ph",
+        "hobies" : "Reading",
+        "adress" : "Netherlands",
+        "state" : "NCR", 
+        "city" : "Delhi"
     }
 }

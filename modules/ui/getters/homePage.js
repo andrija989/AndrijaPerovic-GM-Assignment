@@ -15,4 +15,9 @@ export class HomePage {
     await this.elementsCard.click();
     await expect(this.page).toHaveURL(/elements/);
   }
+
+  async navigateToElements() {
+    await this.elementsCard.click();
+    await expect(this.page).toHaveURL(/elements/);
+  }
 }
