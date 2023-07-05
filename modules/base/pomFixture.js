@@ -2,6 +2,8 @@
 
 import { chromium, test as baseTest } from "@playwright/test";
 import { General } from "../ui/getters/general";
+import { HomePage } from "../ui/getters/homePage";
+import { PlaygroundPage } from "../ui/getters/playgroundPage";
 
 const testPages = baseTest.extend({
   wpage: [
@@ -18,6 +20,12 @@ const testPages = baseTest.extend({
   ],
   general: async ({ wpage }, use) => {
     await use(new General(wpage));
+  },
+  homePage: async ({ wpage }, use) => {
+    await use(new HomePage(wpage));
+  },
+  playgroundPage: async ({ wpage }, use) => {
+    await use(new PlaygroundPage(wpage));
   },
 });
 

@@ -5,7 +5,9 @@ test.describe("B2C testing", () => {
     await general.visitPage("");
   });
 
-  test("B2C-01 - Validate b2c token", async ({}) => {
-    console.log("hello");
+  test("B2C-01 - Validate b2c token", async ({ homePage, playgroundPage }) => {
+    await homePage.navigateToElements();
+    await playgroundPage.openTabels({});
+    await playgroundPage.addNewRecord({});
   });
 });
