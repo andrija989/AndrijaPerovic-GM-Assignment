@@ -48,7 +48,7 @@ test.describe("UI scenarios", () => {
     await hoverPage.validateTooltip();
   });
 
-  test.only("TC - 07", async ({ dragAndDrop }) => {
+  test("TC - 07", async ({ dragAndDrop }) => {
     await dragAndDrop.moveItem();
   });
 });

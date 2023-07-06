@@ -18,8 +18,8 @@ export class BrokenImagesPage {
   }
 
   async validateBrokenImage(id = 3) {
-    const elWidth = await this.img.nth(id).boundingBox();
     expect(await this.img.nth(id)).toBeVisible();
+    const elWidth = await this.img.nth(id).boundingBox();
     expect(Math.floor(elWidth.width)).toEqual(50);
   }
 }

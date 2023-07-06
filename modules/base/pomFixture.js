@@ -9,6 +9,9 @@ import { PracticeForms } from "../ui/getters/praticeForms";
 import { ProgressBar } from "../ui/getters/progressBar";
 import { HoverPage } from "../ui/getters/hoverPage";
 import { DragAndDrop } from "../ui/getters/dragAndDrop";
+import { RegisterAPI } from "../api/register";
+import { LoginAPI } from "../api/login";
+import { BooksAPI } from "../api/books";
 
 const testPages = baseTest.extend({
   wpage: [
@@ -46,6 +49,15 @@ const testPages = baseTest.extend({
   },
   dragAndDrop: async ({ wpage }, use) => {
     await use(new DragAndDrop(wpage));
+  },
+  registerAPI: async ({ wpage }, use) => {
+    await use(new RegisterAPI(wpage));
+  },
+  loginAPI: async ({ wpage }, use) => {
+    await use(new LoginAPI(wpage));
+  },
+  booksAPI: async ({ wpage }, use) => {
+    await use(new BooksAPI(wpage));
   },
 });
 
