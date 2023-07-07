@@ -14,7 +14,7 @@ Before running the tests in this project, make sure you have the following depen
 
 Clone this repository to your local machine using the following command:
 
-- git clone https://cramodev.visualstudio.com/Cramo%20Integration/_git/Automation-qa
+- git clone https://github.com/andrija989/AndrijaPerovic-GM-Assignment
 - Navigate to the project's directory:
 - cd playwright-project
 - Install the project dependencies:
@@ -23,4 +23,3 @@ Clone this repository to your local machine using the following command:
 1. ui tests - npm run test-ui
 
 2. API tests - npm run test-api
-
